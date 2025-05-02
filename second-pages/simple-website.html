@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study – Ian Lockwood</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: "Atkinson Hyperlegible", sans-serif;
+      background-color: #fffdf7;
+      color: #2f2f2f;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+    }
+
+    a {
+      color: #8b0000;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #600000;
+    }
+
+    .section {
+      margin-top: 2.5rem;
+    }
+
+    .img-block {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .img-block img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .code-block {
+      background: #f4f4f4;
+      border-left: 4px solid #8b0000;
+      padding: 1rem;
+      font-family: monospace;
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    .download-links {
+      margin-top: 1.5rem;
+    }
+
+    .download-links a {
+      display: inline-block;
+      margin-right: 12px;
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      background-color: #8b0000;
+      color: #fff;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .download-links a:hover {
+      background-color: #600000;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>From Wireframe to SERP: A Plain HTML Website Built for Discovery</h1>
+    <p>This page outlines the context, tools, decisions, and outcomes behind this data engineering project.</p>
+
+    <section class="section">
+      <h2>Overview</h2>
+      <p>Sometimes, the simplest sites perform the best. Here’s how I built and launched a responsive, semantic HTML/CSS/JS site that ranks on page 1 of Google.</p>
+    </section>
+
+    <section class="section">
+      <h2>Process & Methodology</h2>
+      <div class="img-block">
+        <img src="your-image-path.jpg" alt="Diagram or process illustration" />
+        <p><em>High-level system flow or architecture diagram</em></p>
+      </div>
+      <p>Integer pharetra euismod nunc a volutpat. In this stage, I mapped legacy systems, designed schemas, and coordinated across dev and finance teams to build reliable staging layers in Glue.</p>
+    </section>
+
+    <section class="section">
+      <h2>Example SQL</h2>
+      <div class="code-block">
+<pre>
+INSERT INTO reporting.customer_summary (
+  customer_id, total_deals, last_payment_date
+)
+SELECT 
+  c.id, COUNT(d.id), MAX(p.date)
+FROM customers c
+JOIN deals d ON d.customer_id = c.id
+LEFT JOIN payments p ON p.deal_id = d.id
+GROUP BY c.id;
+</pre>
+      </div>
+      <p>Example logic to generate daily snapshots used for executive reporting and ML model inputs.</p>
+    </section>
+
+    <section class="section">
+      <h2>Results</h2>
+      <p>Sed non velit nec libero ultrices congue. Queries that used to take 45+ seconds in Sage now run in 2.3s in Redshift, and error rates dropped by 96% after refactoring data flow using Glue triggers and modular Python scripts.</p>
+    </section>
+
+    <section class="section download-links">
+      <h2>Downloads & Links</h2>
+      <a href="link_to_deck.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Deck</a>
+      <a href="link_to_github" target="_blank"><i class="fab fa-github"></i> GitHub Repo</a>
+      <a href="link_to_sql_file.sql" target="_blank"><i class="fas fa-database"></i> SQL File</a>
+    </section>
+
+    <div class="footer">
+      <p>&copy; 2025 Ian Lockwood</p>
+    </div>
+  </main>
+</body>
+</html>
